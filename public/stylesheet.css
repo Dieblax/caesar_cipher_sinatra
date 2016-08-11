@@ -1,0 +1,138 @@
+@font-face {
+    font-family: Raleway;
+    src: url(Raleway-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(Raleway-Bold.ttf);
+    font-weight: bold;
+}
+
+body {
+	background-image: url("/binary_bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: Raleway
+}
+
+.wrapper {
+   height: 60vh;
+   width: 50vw;
+   position: absolute;
+   left: 50%;
+   margin-left: -25vw;
+   top: 50%;
+   margin-top: -30vh;
+}
+
+form {
+	position: relative;
+	width: 100%;	
+	height: 40vh;
+}
+
+.text, .key {
+	margin-top: 60px;
+	position: absolute;
+	text-align: center;
+	background-color: transparent;
+	border-width: 0 0 2px 0;
+	border-color: #858585;
+	padding-bottom: 5px;
+	font-size: 36px;
+	display: block;
+}
+
+.text {
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+.key {
+	top: 100px;
+	width: 30%;
+	margin-left: 35%;
+	margin-right: 35%;
+}
+
+input:focus {
+	outline: none;
+}
+
+.encrypt, .decrypt {
+	-webkit-appearance: none;
+	display: inline-block;
+	border: none;
+	color: #FFF;
+	font-size: 36px;
+	position: absolute;
+	width: 22.5vw;
+	bottom: -100px;
+	padding: 10px;
+	font-weight: bold;
+}
+
+.encrypt {
+	left: 0;
+	background-color: #25b459;
+}
+
+.decrypt {
+	right: 0;
+	background-color: #f2142b;
+}
+
+.encrypt:hover, .decrypt:hover {
+	background-color: white;
+	cursor: pointer;
+}
+
+.encrypt:hover {
+	color: #25b459;
+	border: 3px solid #25b459;
+	padding: 7px;
+}
+
+.decrypt:hover {
+	color: #f2142b;
+	border: 3px solid #f2142b;
+	padding: 7px;
+}
+
+.encrypted, .decrypted {
+	width: 100%;
+}
+
+.encrypted:hover, .decrypted:hover {
+	color: white;
+	border: none;
+	padding: 10px;
+	cursor: default;
+}
+
+.encrypted:hover {
+	background-color: #25b459;
+}
+
+.decrypted:hover {
+	background-color: #f2142b;
+}
+
+input:focus::-webkit-input-placeholder 
+{
+    color: transparent;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+a:hover {
+	color: #222;
+}
+
+

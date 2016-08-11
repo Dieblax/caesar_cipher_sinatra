@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Encrypt stuff</title>
+	<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/4.1.1/normalize.css">
+	<link rel="stylesheet" type="text/css" href="<%= url('/stylesheet.css') %>">
+</head>
+<body>
+	<div class="wrapper">
+		<form>
+
+			<% unless result.nil? || result.empty?  %>
+				<p class="text"><%= result %></p>
+				<p class="key">key : <%= key %></p>
+				<% if encrypted %>
+					<input type="submit" class="encrypt encrypted" value="ENCRYPTED" disabled="true">
+				<% else %>
+					<input type="submit" class="decrypt decrypted" value="DECRYPTED" disabled="true">
+				<% end %>
+				<a href="<%= url("/")%>">Back</a> 
+				
+			<% else %>
+				<input class="text" type="text" name="text" placeholder="Some text here" autocomplete="off">
+				<input class="key" type="number" name="key" placeholder="key" autocomplete="off">
+				<input class="encrypt" type="submit" name="encrypt" value="ENCRYPT">
+				<input class="decrypt" type="submit" name="decrypt" value="DECRYPT">
+			<% end %>
+			
+		</form>
+		
+
+	</div>
+</body>
+</html>
+<!-- <a href=" url("/")">Back</a> -->
